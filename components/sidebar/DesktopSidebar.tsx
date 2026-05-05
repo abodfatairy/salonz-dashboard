@@ -74,7 +74,7 @@ const DesktopSidebar = memo(({ children }: { children: React.ReactNode }) => {
           },
           {
             name: "العلامات التجارية",
-            path: "/store/brand",
+            path: "/store/brands",
             icon: <Award className='h-4 w-4' />, // أيقونة مناسبة للبراندات
           },
           {
@@ -118,7 +118,7 @@ const DesktopSidebar = memo(({ children }: { children: React.ReactNode }) => {
       {
         name: "الحساب",
         icon: <User className='h-5 w-5' />,
-        path: "/dashboard/account",
+        path: "/dashboard/profile",
       },
     ],
     [],

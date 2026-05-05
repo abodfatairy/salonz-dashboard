@@ -1,7 +1,18 @@
 "use client";
 
 import React, { useEffect, useState, useMemo, memo } from "react";
-import { Home, Users, User, Plus, Tags, FileText, Scissors, LayoutGrid, Award, Store } from "lucide-react";
+import {
+  Home,
+  Users,
+  User,
+  Plus,
+  Tags,
+  FileText,
+  Scissors,
+  LayoutGrid,
+  Award,
+  Store,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -59,7 +70,7 @@ const MobileSidebar = memo(({ children }: { children: React.ReactNode }) => {
           },
           {
             name: "العلامات التجارية",
-            path: "/store/brand",
+            path: "/store/brands",
             icon: <Award className='h-4 w-4' />, // أيقونة مناسبة للبراندات
           },
           {
@@ -103,7 +114,7 @@ const MobileSidebar = memo(({ children }: { children: React.ReactNode }) => {
       {
         name: "الحساب",
         icon: <User className='h-5 w-5' />,
-        path: "/dashboard/account",
+        path: "/dashboard/profile",
       },
     ],
     [],
