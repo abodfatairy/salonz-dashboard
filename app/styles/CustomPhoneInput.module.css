@@ -1,0 +1,232 @@
+/* CustomPhoneInput.module.css */
+
+.wrapper {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  direction: rtl;
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1.5px solid #d1d5db;
+  height: 3.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* تأثير عند التركيز على الحقل */
+.inputContainer:focus-within {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+.inputError {
+  border-color: #fca5a5 !important;
+}
+
+.inputSuccess {
+  border-color: #86efac !important;
+}
+
+.countryBox {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  background-color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.countryBox:hover {
+  background-color: #e5e7eb;
+}
+
+.flagIcon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: #000;
+}
+
+.callingCode {
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  direction: ltr; /* لضمان ظهور الـ + في المكان الصحيح */
+}
+
+.chevron {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.divider {
+  width: 1px;
+  height: 60%;
+  background-color: #d1d5db;
+}
+
+.input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: #1f2937;
+  padding: 0 1rem;
+  background-color: transparent;
+  direction: ltr; /* الأرقام دائماً من اليسار لليمين */
+  text-align: right;
+  letter-spacing: 2px;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  letter-spacing: normal;
+}
+
+.validationText {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+.modalHeader {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #f3f4f6;
+  background-color: #f9fafb;
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.countriesList {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* تخصيص السكرول بار ليصبح أنيقاً */
+.countriesList::-webkit-scrollbar {
+  width: 6px;
+}
+.countriesList::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+.countryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 100%;
+  text-align: right;
+  transition: background-color 0.2s;
+}
+
+.countryItem:hover {
+  background-color: #f8fafc;
+}
+
+.countryItemNameContainer {
+  display: flex;
+  align-items: center;
+}
+
+.countryItemName {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+  margin-right: 0.75rem;
+}
+
+.countryItemCode {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+  direction: ltr;
+}
+
+.countryItemFlag {
+  font-size: 1.5rem;
+}
+
+.modalClose {
+  padding: 1rem;
+  width: 100%;
+  background-color: #fef2f2;
+  border: none;
+  border-top: 1px solid #fee2e2;
+  color: #dc2626;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modalClose:hover {
+  background-color: #fce8e8;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

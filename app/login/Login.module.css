@@ -1,0 +1,93 @@
+/* Login.module.css */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6; /* خلفية الصفحة رمادي فاتح جداً مريحة للعين */
+  padding: 1.5rem;
+  direction: rtl; /* لدعم اللغة العربية من اليمين لليسار */
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.card {
+  background-color: #ffffff; /* بطاقة تسجيل الدخول بيضاء */
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 400px; /* متجاوب */
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    /* ظل ناعم وخفيف يناسب اللون الأبيض */ 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb; /* إطار خفيف جداً */
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ec4899; /* لون زهري قوي ليكون واضحاً على الأبيض */
+  text-align: center;
+}
+
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #f9fafb; /* لون خلفية الحقل رمادي خفيف لتمييزه عن البطاقة */
+  border: 1px solid #d1d5db; /* حدود الحقل رمادية */
+  color: #111827; /* لون النص أسود داكن */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* لمنع خروج الحقل عن الإطار */
+}
+
+.input::placeholder {
+  color: #9ca3af; /* لون النص التوضيحي (Placeholder) */
+}
+
+.input:focus {
+  outline: none;
+  background-color: #ffffff; /* يصبح أبيض ناصع عند الكتابة */
+  border-color: #ec4899; /* يتغير لون الإطار للزهري */
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15); /* هالة زهرية خفيفة */
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  background-color: #ec4899; /* الزر باللون الزهري */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #db2777; /* لون أغمق قليلاً عند تمرير الماوس */
+  transform: translateY(-2px); /* تأثير حركة خفيف */
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3); /* إضافة ظل زهري تحت الزر */
+}
+
+.button:disabled {
+  background-color: #e5e7eb; /* رمادي فاتح عند التحميل */
+  color: #9ca3af; /* لون النص رمادي */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
