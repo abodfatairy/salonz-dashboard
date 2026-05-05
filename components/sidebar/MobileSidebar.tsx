@@ -114,7 +114,7 @@ const MobileSidebar = memo(({ children }: { children: React.ReactNode }) => {
       {
         name: "الحساب",
         icon: <User className='h-5 w-5' />,
-        path: "/dashboard/profile",
+        path: "/profile",
       },
     ],
     [],
